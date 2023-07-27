@@ -1,0 +1,34 @@
+{
+  "hosting": {
+    "public": "stylish-react/build",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "redirects": [
+      {
+        "source": "/home",
+        "destination": "/home.html",
+        "type": 301
+      },
+      {
+        "source": "/women",
+        "destination": "/home.html?category=women&paging=0",
+        "type": 301
+      },
+      {
+        "source": "/men",
+        "destination": "/home.html?category=men",
+        "type": 301
+      },
+      {
+        "source": "/accessories",
+        "destination": "/home.html?category=accessories",
+        "type": 301
+      }
+    ]
+  }
+}
